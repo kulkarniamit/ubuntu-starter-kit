@@ -16,8 +16,15 @@ sudo dpkg --install ~/Downloads/stacer_1.0.7_amd64.deb
 # OpenSSH Public-Private key Setup
 ssh-keygen -t rsa -b 8192
 
+# Remove stupid games
+sudo apt-get purge aisleriot gnome-sudoku gnome-mahjongg gnome-mines
+
+# Say no to thunderbird
+sudo apt-get purge thunderbird*
+
 # Cleanup
 rm -rf ~/Downloads/stacer_1.0.7_amd64.deb
+sudo apt-get autoremove
 
 # Download Google chrome
 firefox "https://www.google.com/chrome/browser/desktop/index.html"
