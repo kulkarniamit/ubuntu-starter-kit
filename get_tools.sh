@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Install awesome tools
-sudo apt-get install git vim unity-tweak-tool openssh-server
+sudo apt-get install git vim unity-tweak-tool openssh-server tmux
 
 # Install system cleaner
 sudo apt-get install systemd -f
