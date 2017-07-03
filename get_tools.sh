@@ -6,6 +6,9 @@ sudo apt-get update
 # Install awesome tools
 sudo apt-get install git vim unity-tweak-tool openssh-server tmux curl
 
+# Create a good config file for vim
+echo -e "set hlsearch\nset background=dark\nset nu\nset tabstop=4" > ~/.vimrc
+
 # Install system cleaner
 sudo apt-get install bleachbit
 
