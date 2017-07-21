@@ -5,11 +5,14 @@ sudo apt-get update
 
 # Install awesome tools
 echo "Installing awesome tools..."
-sudo apt-get install git vim unity-tweak-tool openssh-server tmux curl xfonts-terminus console-terminus
+sudo apt-get install git vim unity-tweak-tool openssh-server tmux curl xfonts-terminus console-terminus gdb
 
 # Create a good config file for vim
 echo "Installing vimrc config file..."
 echo -e "set hlsearch\nset background=dark\nset nu\nset tabstop=4" > ~/.vimrc
+
+# Helpful init commands for gdb
+echo -e "set print pretty on\n" > ~/.gdbinit
 
 # Install system cleaner
 echo "Installing system cleaner..."
