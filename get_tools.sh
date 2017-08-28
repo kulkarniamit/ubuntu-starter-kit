@@ -5,7 +5,7 @@ sudo apt-get update
 
 # Install awesome tools
 echo "Installing awesome tools..."
-sudo apt-get install git vim unity-tweak-tool openssh-server tmux curl xfonts-terminus console-terminus gdb
+sudo apt-get install --assume-yes git vim unity-tweak-tool openssh-server tmux curl xfonts-terminus console-terminus gdb
 
 # Create a good config file for vim
 echo "Installing vimrc config file..."
@@ -16,7 +16,7 @@ echo -e "set print pretty on\n" > ~/.gdbinit
 
 # Install system cleaner
 echo "Installing system cleaner..."
-sudo apt-get install bleachbit
+sudo apt-get install --assume-yes bleachbit
 
 # OpenSSH Public-Private key Setup
 echo "Generating your public-private key pair..."
@@ -24,11 +24,11 @@ ssh-keygen -t rsa -b 8192
 
 # Remove stupid games
 echo "Removing idiotic games..."
-sudo apt-get purge aisleriot gnome-sudoku gnome-mahjongg gnome-mines
+sudo apt-get purge --assume-yes aisleriot gnome-sudoku gnome-mahjongg gnome-mines
 
 # Say no to thunderbird
 echo "Removing thunderbird client..."
-sudo apt-get purge thunderbird*
+sudo apt-get purge --assume-yes thunderbird*
 
 # Cleanup
 echo "Cleaning up..."
