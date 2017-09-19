@@ -1,12 +1,21 @@
-#!/bin/sh
+#!/bin/bash
 
 # Update
 sudo apt-get update
 
 # Install awesome tools
 echo "Installing awesome tools..."
-sudo apt-get install --assume-yes git vim unity-tweak-tool openssh-server tmux curl xfonts-terminus console-terminus gdb
-
+sudo apt-get install --assume-yes \
+    git \
+    vim \
+    unity-tweak-tool \
+    openssh-server \
+    tmux \
+    curl \
+    xfonts-terminus \
+    console-terminus \
+    gdb
+    
 # Create a good config file for vim
 echo "Installing vimrc config file..."
 echo -e "set hlsearch\nset background=dark\nset nu\nset tabstop=4" > ~/.vimrc
@@ -34,9 +43,11 @@ sudo apt-get purge --assume-yes thunderbird*
 echo "Cleaning up..."
 sudo apt-get autoremove
 
-# Download Google chrome
-firefox "https://www.google.com/chrome/browser/desktop/index.html"
+which firefox > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    # Firefox exists. Launch it to initiate chrome download
+    firefox "https://www.google.com/chrome/browser/desktop/index.html"
+fi
 
-echo "Please install Stacer and Google chrome from ~/Downloads"
 echo "Thank you for using this script"
 echo "Have a great start!"
