@@ -16,6 +16,9 @@ sudo apt-get install --assume-yes \
     console-terminus \
     gdb
     
+# Set "vim" as default editor for GIT
+git config --global core.editor "vim"
+
 # Create a good config file for vim
 echo "Installing vimrc config file..."
 echo -e "set hlsearch\nset background=dark\nset nu\nset tabstop=4" > ~/.vimrc
