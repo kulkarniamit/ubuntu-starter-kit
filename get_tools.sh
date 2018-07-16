@@ -42,6 +42,11 @@ sudo apt-get purge --assume-yes aisleriot gnome-sudoku gnome-mahjongg gnome-mine
 echo "Removing thunderbird client..."
 sudo apt-get purge --assume-yes thunderbird*
 
+# Remove libreoffice:
+sudo apt-get remove -y --purge libreoffice*
+sudo apt-get clean
+sudo apt-get autoremove
+
 # Cleanup
 echo "Cleaning up..."
 sudo apt-get autoremove
