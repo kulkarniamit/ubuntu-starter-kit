@@ -14,6 +14,8 @@ sudo apt-get install --assume-yes \
     curl \
     xfonts-terminus \
     console-terminus \
+    manpages-dev \
+    manpages-posix-dev \
     gdb
     
 # Set "vim" as default editor for GIT
@@ -53,9 +55,8 @@ sudo apt-get autoremove
 
 which firefox > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    # Firefox exists. Launch it to initiate chrome download
-    firefox "https://www.google.com/chrome/browser/desktop/index.html"
+    # Firefox exists. Launch it to initiate brave download
+    firefox "https://brave.com/download/"
 fi
 
-echo "Thank you for using this script"
 echo "Have a great start!"
